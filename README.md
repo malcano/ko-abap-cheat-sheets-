@@ -27,6 +27,7 @@
 ABAP cheat sheets[^1] ...
 <h3 style="color: #FFAAAA">(注) 원 레포지토리 READ_ME에서는 SAP에서 contribution 용도가 아니라고 밝히고 있습니다. 본 문서 한국어 번역은 비공식 번역임을 알려드립니다.
 </h3>
+
 본 문서는 의역이 포함되어 있으므로 정확한 내용은 [원문](https://github.com/malcano/abap-cheat-sheets)을 참고하여 주세요.
 
 - **주제를 선택**하여 여러분이 참고할 수 있는 **ABAP** 레퍼런스를 확인할 수 있습니다.
