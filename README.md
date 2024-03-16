@@ -1,5 +1,8 @@
 <br />
 <div align="center">
+  <a href="https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap.htm">
+    <img src="./files/ABAP_Keyword_Documentation.png" alt="ABAP Keyword Documentation" >
+  </a>
 
   <h3 align="center" style="font-size: 40px; color: #FCB913;">ABAP Cheat Sheets</h3>
 <h5 align="center" style="font-size: 20px; color: #CCBFFF;">ABAP Cheat Sheets 한국어 버전(비공식)</h5>
@@ -50,7 +53,7 @@ ABAP cheat sheets[^1] ...
 ABAP 버전에 따른 ABAP 언어 요소의 차이를 확인할 수 있습니다. &nbsp;&nbsp; i. e. ABAP Cloud 허용 여부 등<br>
 또한, [여기](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenreleased_apis.htm)를 눌러 릴리즈된 API를 확인할 수 있습니다.
 - 모든 ABAP 치트 시트를 한 레포지토리에 보관할 목적으로, 클래식 ABAP에만 해당하는 ABAP 치트 시트 문서도 ABAP Cloud 예제를 위한 *main* 브랜치에 포함됩니다.
-- 클래식 ABAP용 브랜치에 포함된 예제 class는 대부분 ABAP for Cloud Development에서도 사용할 수 있습니다. `TEST_ABAP_CHEAT_SHEETS_CLASSIC` 하위 패키지의 경우에만 
+- 클래식 ABAP용 브랜치에 포함된 예제 class는 대부분 ABAP for Cloud Development에서도 사용할 수 있습니다. `TEST_ABAP_CHEAT_SHEETS_CLASSIC` 하위 패키지에만 스탠다드 ABAP 문법을 포
 - The example classes contained in the branches for classic ABAP mostly use syntax that is also available in ABAP for Cloud Development. Only the  `TEST_ABAP_CHEAT_SHEETS_CLASSIC` subpackage contains syntax relevant to Standard ABAP and that is not available in ABAP for Cloud Development, such as dynpro-related ABAP keywords.
 </details>
 
