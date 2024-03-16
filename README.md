@@ -1,8 +1,6 @@
 <br />
 <div align="center">
-  <a href="https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap.htm">
-    <img src="./files/ABAP_Keyword_Documentation.png" alt="ABAP Keyword Documentation" >
-  </a>
+
 
   <h3 align="center" style="font-size: 40px; color: #FCB913;">ABAP Cheat Sheets</h3>
 <h5 align="center" style="font-size: 20px; color: #CCBFFF;">ABAP Cheat Sheets 한국어 버전(비공식)</h5>
@@ -12,7 +10,7 @@
     <!--<a href=""><strong>Expore ABAP syntax in a nutshell & executable examples</strong></a>
     <br />-->
     <br />
-    <a href="#%EF%B8%8F-어떻게-활용할-수-있나요?">어떻게 활용할 수 있나요?</a>
+    <a href="#%EF%B8%8F-활용-방법">활용 방법</a>
     ·
     <a href="#-abap-cheat-sheets-overview">Cheat Sheets</a>
     ·
@@ -59,7 +57,7 @@ ABAP 버전에 따른 ABAP 언어 요소의 차이를 확인할 수 있습니다
 
 <br>
 
-## 🏗️ 어떻게 활용할 수 있나요?
+## 🏗️ 활용 방법
 
 1. **ABAP 구문 정보**: [ABAP cheat sheets](#-abap-cheat-sheets-overview)에서 간단한 설명을 통해 다양한 ABAP 구문과 개념을 익혀보세요.
 2. **예제**: [abapGit](https://abapgit.org/)을 사용하여 ABAP development object를 레포지토리로 가져오고([여기](#-getting-started-with-the-examples)를 참조) [ABAP development tools for Eclipse (ADT)](https://tools.eu1.hana.ondemand.com/)환경에서 *F9*를 눌러 데모 클래스를 실행시켜 ABAP구문이 작동되는 것을 확인할 수 있어요.
