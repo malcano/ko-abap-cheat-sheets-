@@ -95,9 +95,9 @@ ABAP 버전에 따른 ABAP 언어 요소의 차이를 확인할 수 있습니다
 
 ## 🎬 Getting Started with the Examples
 
-The main focus of the ABAP Cheat Sheets is ABAP Cloud. The examples in the *main* branch of the repository are designed to be imported into the SAP BTP ABAP environment.
-For classic ABAP, you can find examples in the other branches of the repository that you can import into your sandbox SAP system. Just select the appropriate version (*v757* stands for ABAP version 7.57). Check the information in the following collapsible sections for your system environment and perform the required steps.
-
+ABAP Cheat Sheets는 ABAP Cloud에 중점을 두고 있습니다. 레포지토리 상 *main*브랜치의 예제는 SAP BTP ABAP 환경으로 가져올 수 있도록 설계되어 있습니다.
+Classic ABAP의 경우, 레포지토리의 다른 브랜치에서 적절한 버전 (*v757* 는 ABAP 버전 7.57입니다)을 선택하여 샌드박스 SAP 시스템으로 예제를 가져올 수 있습니다. 
+시스템 환경에 맞는 정보를 아래에서 확인하고 필요한 작업을 수행해주세요.
 <details>
   <summary>1) General info</summary>
   <br>
