@@ -12,7 +12,7 @@
     <!--<a href=""><strong>Expore ABAP syntax in a nutshell & executable examples</strong></a>
     <br />-->
     <br />
-    <a href="#%EF%B8%8F-how-to-use">How to Use</a>
+    <a href="#%EF%B8%8F-어떻게-활용할-수-있나요?">어떻게 활용할 수 있나요?</a>
     ·
     <a href="#-abap-cheat-sheets-overview">Cheat Sheets</a>
     ·
@@ -26,9 +26,9 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/abap-cheat-sheets)](https://api.reuse.software/info/github.com/SAP-samples/abap-cheat-sheets)
 
 ABAP cheat sheets[^1] ...
-<h5 style="color: #FFAAAA">(注) 원 레포지토리 READ_ME에서는 SAP에서 contribution 용도가 아니라고 밝히고 있습니다. 본 문서 한국어 번역은 비공식 번역임을 알려
+<h3 style="color: #FFAAAA">(注) 원 레포지토리 READ_ME에서는 SAP에서 contribution 용도가 아니라고 밝히고 있습니다. 본 문서 한국어 번역은 비공식 번역임을 알려
 드립니다.
-</h5>
+</h3>
 
 - **주제를 선택**하여 여러분이 참고할 수 있는 **ABAP** 레퍼런스를 확인할 수 있습니다.
 - focus on **ABAP syntax**.
@@ -55,16 +55,14 @@ ABAP 버전에 따른 ABAP 언어 요소의 차이를 확인할 수 있습니다
 - 모든 ABAP 치트 시트를 한 레포지토리에 보관할 목적으로, 클래식 ABAP에만 해당하는 ABAP 치트 시트 문서도 ABAP Cloud 예제를 위한 *main* 브랜치에 포함됩니다.
 - 클래식 ABAP용 브랜치에 포함된 예제 class는 대부분 ABAP for Cloud Development에서도 사용할 수 있습니다. 서브패키지 `TEST_ABAP_CHEAT_SHEETS_CLASSIC`는 스탠다드 ABAP과 관련된 구문을 포함하고 있으며, dynpro ABAP과 같은 키워드는 ABAP for Cloud Development에서 사용할 수 없습니다.
 
-- The example classes contained in the branches for classic ABAP mostly use syntax that is also available in ABAP for Cloud Development. Only the  `TEST_ABAP_CHEAT_SHEETS_CLASSIC` subpackage contains syntax relevant to Standard ABAP and that is not available in ABAP for Cloud Development, such as dynpro-related ABAP keywords.
 </details>
 
 <br>
 
-## 🏗️ How to Use
+## 🏗️ 어떻게 활용할 수 있나요?
 
-1. **ABAP syntax info**: Get info in a nutshell on ABAP syntax and concepts related to various ABAP topics in the [ABAP cheat sheets](#-abap-cheat-sheets-overview).
-2. **Demo examples**: Import the ABAP development objects of this repository (Note: *main* branch for ABAP Cloud only) into your system using [abapGit](https://abapgit.org/) as described [here](#-getting-started-with-the-examples) and run the demo classes by choosing *F9* in the [ABAP development tools for Eclipse (ADT)](https://tools.eu1.hana.ondemand.com/) for checking out the ABAP syntax in action.
-
+1. **ABAP 구문 정보**: [ABAP cheat sheets](#-abap-cheat-sheets-overview)에서 간단한 설명을 통해 다양한 ABAP 구문과 개념을 익혀보세요.
+2. **예제**: [abapGit](https://abapgit.org/)을 사용하여 ABAP development object를 레포지토리로 가져오고([여기](#-getting-started-with-the-examples)를 참조) [ABAP development tools for Eclipse (ADT)](https://tools.eu1.hana.ondemand.com/)환경에서 *F9*를 눌러 데모 클래스를 실행시켜 ABAP구문이 작동되는 것을 확인할 수 있어요.
 <br>
 
 ## 📝 ABAP Cheat Sheets Overview
