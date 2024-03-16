@@ -1,8 +1,5 @@
 <br />
 <div align="center">
-  <a href="https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap.htm">
-    <img src="./files/ABAP_Keyword_Documentation.png" alt="ABAP Keyword Documentation" >
-  </a>
 
   <h3 align="center" style="font-size: 40px; color: #FCB913;">ABAP Cheat Sheets</h3>
 <h5 align="center" style="font-size: 20px; color: #CCBFFF;">ABAP Cheat Sheets 한국어 버전(비공식)</h5>
