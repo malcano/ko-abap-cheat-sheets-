@@ -1,7 +1,8 @@
 <br />
 <div align="center">
-
-
+  <a href="https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap.htm">
+    <img src="./files/ABAP_Keyword_Documentation.png" alt="ABAP Keyword Documentation" >
+  </a>
   <h3 align="center" style="font-size: 40px; color: #FCB913;">ABAP Cheat Sheets</h3>
 <h5 align="center" style="font-size: 20px; color: #CCBFFF;">ABAP Cheat Sheets 한국어 버전(비공식)</h5>
   <p align="center">
@@ -12,7 +13,7 @@
     <br />
     <a href="#%EF%B8%8F-활용-방법">활용 방법</a>
     ·
-    <a href="#-abap-cheat-sheets-overview">Cheat Sheets</a>
+    <a href="#-abap-cheat-sheets-개요">Cheat Sheets</a>
     ·
     <a href="#-getting-started-with-the-examples">Examples</a>
   </p>
@@ -63,11 +64,11 @@ ABAP 버전에 따른 ABAP 언어 요소의 차이를 확인할 수 있습니다
 2. **예제**: [abapGit](https://abapgit.org/)을 사용하여 ABAP development object를 레포지토리로 가져오고([여기](#-getting-started-with-the-examples)를 참조) [ABAP development tools for Eclipse (ADT)](https://tools.eu1.hana.ondemand.com/)환경에서 *F9*를 눌러 데모 클래스를 실행시켜 ABAP구문이 작동되는 것을 확인할 수 있어요.
 <br>
 
-## 📝 ABAP Cheat Sheets Overview
+## 📝 ABAP Cheat Sheets 개요
 
-| Cheat Sheet        | Topics Covered           |  Demo Example  |
+| Cheat Sheet        | 내 용           |  Demo 예제  |
 | ------------- | ------------- | ----- |
-|[ABAP for Cloud Development](19_ABAP_for_Cloud_Development.md)| Briefly outlines the terms ABAP Cloud and classic ABAP to set the context for ABAP for Cloud Development | [zcl_demo_abap_cloud_excursion](./src/zcl_demo_abap_cloud_excursion.clas.abap) (see the notes in the cheat sheet) |
+|[ABAP for Cloud Development](19_ABAP_for_Cloud_Development.md)| ABAP Cloud 용어 개괄 및 ABAP for Cloud Development 환경을 위한 classic ABAP | [zcl_demo_abap_cloud_excursion](./src/zcl_demo_abap_cloud_excursion.clas.abap) (see the notes in the cheat sheet) |
 |[Data Types and Data Objects](16_Data_Types_and_Objects.md)| Contains basic information about data types and data objects in ABAP  | [zcl_demo_abap_dtype_dobj](./src/zcl_demo_abap_dtype_dobj.clas.abap)   |
 |[Internal Tables](01_Internal_Tables.md)| Creating, filling, reading from, sorting, modifying internal tables  | [zcl_demo_abap_internal_tables](./src/zcl_demo_abap_internal_tables.clas.abap)   |
 |[Structures](02_Structures.md)| Some basics when working with structures  |  [zcl_demo_abap_structures](./src/zcl_demo_abap_structures.clas.abap)  |
