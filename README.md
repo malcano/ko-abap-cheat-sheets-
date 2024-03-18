@@ -45,7 +45,7 @@ ABAP cheat sheets[^1] ...
 (첫 항목 중심):
   - [ABAP for Cloud Development](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap_for_sap_cloud_glosry.htm): Restricted ABAP language scope for [ABAP Cloud](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenabap_cloud_glosry.htm) → [Online version of the documentation](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm)
   - [Standard ABAP](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenstandard_abap_glosry.htm): Unrestricted ABAP language scope, for example, for [classic ABAP](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenclassic_abap_glosry.htm) → [Online version of the documentation (latest version)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap.htm)
-- [알려진 이슈](#-known-issues)와 [면책조항](#%EF%B8%8F-disclaimer)을 확인해주세요.
+- [알려진 이슈](#-알려진-이슈)와 [면책조항](#%EF%B8%8F-disclaimer)을 확인해주세요.
 - 본 치트시트는 ABAP 키워드 문서의 항목과 토픽에 대한 링크를 제공합니다. 
 기존의 ABAP-only 치트 시트와 달리, ABAP for Cloud Development의 링크를 참조합니다.
 - [여기](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenrestricted_abap_elements.htm)를 눌러 
@@ -213,12 +213,12 @@ Use the standalone version of the abapGit report to import the demo examples of 
 
 <br>
 
-## ⚡ Known Issues
-- Only one user on the system can import this repository because all object names must be globally unique. Before importing the code, you should perform a system-wide search for classes named *ZCL_DEMO_ABAP**, for example. If someone has already imported the content into the system, you can simply check out that imported code.
-- Regarding possible code check warnings, e.g. for the many strings in the code, not using an `ORDER BY` clause, or messages regarding using `SELECT *`, the code deliberately avoids [pragmas](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenpragma_glosry.htm) and [pseudo comments](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenpseudo_comment_glosry.htm) in order to focus on the available ABAP syntax. See also the [Disclaimer](#%EF%B8%8F-disclaimer).
-- Regarding the examples to be imported into on-premise ABAP systems, note the following: The cheat sheet documents cover ABAP syntax regardless of the ABAP release to avoid scattering information and to have the information in one place. Therefore, the lower the release, the fewer syntax options and examples are available. For example, the RAP examples in particular require at least ABAP version 7.56. The code examples in the classic ABAP branches do not necessarily reflect all (described) syntax variations and options that are available in classic ABAP and in the particular ABAP release. 
-- If you encounter import problems with the XSLT/ST objects, try to manually paste the code from the 3 `...source.xml` files ([zdemo_abap_st_carrhtml](./src/zdemo_abap_st_carrhtml.xslt.source.xml), [zdemo_abap_st_strhtml](./src/zdemo_abap_st_strhtml.xslt.source.xml), [zdemo_abap_xslt_fl](./src/zdemo_abap_xslt_fl.xslt.source.xml)) into the improperly imported objects and activate all non-active objects.
-
+## ⚡ 알려진 이슈
+- 모든 오브젝트의 이름은 전역적(globally)으로 유일해야 하므로 시스템의 한 사용자만 본 레포지토리를 import할 수 있습니다. **ZCL_DEMO_ABAP** 클래스를 가져온다면, 해당 이름으로 된 클래스를 시스템 전체에서 찾아본 후 본 코드를 import 해주세요. 이미 시스템으로 가져온 클래스라면 앞서 import된 코드를 참조하세요.
+- 코드 체크 시 다음과 같은 warning이 발생할 수 있습니다. , e.g. 코드 길이가 길어지는 것을 방지하기 위하여 `ORDER BY` 조건을 사용하지 않거나 `SELECT * `을 사용하였습니다.(for the many strings in the code, not using an `ORDER BY` clause, or messages regarding using `SELECT *`), ABAP 구문에 집중하기 위해 의도적으로 [pragmas](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenpragma_glosry.htm)와 [pseudo comments](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenpseudo_comment_glosry.htm)를 사용하지 않습니다. [면책조항](#%EF%B8%8F-disclaimer)도 함께 확인해주세요.
+- 온 프레미스 ABAP 시스템으로 예제를 import 하는 경우, 다음과 같은 사안을 유의해주세요: 본 문서는 정보의 분산을 방지하고 용이한 관리를 위해 ABAP릴리즈를 고려하지 않고 ABAP 문법을 다룹니다. 따라서, 릴리즈 버전이 낮을수록 유효한 예제가 적습니다. 특히, RAP 예제는 ABAP 7.56 이상의 버전이 요구됩니다.
+클래식 ABAP 브랜치의 예제의 경우, 특정 ABAP 릴리즈와 클래식 ABAP에 대한 문법 활용과 설정을 모두 반영하고 있지는 않습니다.
+- XSLT/ST 오브젝트 import 문제가 발생하였다면, 세 `...source.xml`파일 ([zdemo_abap_st_carrhtml](./src/zdemo_abap_st_carrhtml.xslt.source.xml), [zdemo_abap_st_strhtml](./src/zdemo_abap_st_strhtml.xslt.source.xml), [zdemo_abap_xslt_fl](./src/zdemo_abap_xslt_fl.xslt.source.xml))의 코드를 직접 붙여넣고 모든 오브젝트를 활성화해보세요.
 <br>
 
 ## ℹ️ More Information
