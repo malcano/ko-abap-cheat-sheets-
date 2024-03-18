@@ -45,7 +45,7 @@ ABAP cheat sheets[^1] ...
 (첫 항목 중심):
   - [ABAP for Cloud Development](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap_for_sap_cloud_glosry.htm): Restricted ABAP language scope for [ABAP Cloud](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenabap_cloud_glosry.htm) → [Online version of the documentation](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm)
   - [Standard ABAP](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenstandard_abap_glosry.htm): Unrestricted ABAP language scope, for example, for [classic ABAP](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenclassic_abap_glosry.htm) → [Online version of the documentation (latest version)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap.htm)
-- [알려진 이슈](#-알려진-이슈)와 [면책조항](#%EF%B8%8F-disclaimer)을 확인해주세요.
+- [알려진 이슈](#-알려진-이슈)와 [면책조항](#%EF%B8%8F-면책조항)을 확인해주세요.
 - 본 치트시트는 ABAP 키워드 문서의 항목과 토픽에 대한 링크를 제공합니다. 
 기존의 ABAP-only 치트 시트와 달리, ABAP for Cloud Development의 링크를 참조합니다.
 - [여기](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenrestricted_abap_elements.htm)를 눌러 
@@ -236,18 +236,21 @@ Use the standalone version of the abapGit report to import the demo examples of 
 
 <br>
 
-## ⚠️ Disclaimer
-The code examples presented in this repository are only syntax examples and are not intended for direct use in a production system environment. The code examples are primarily intended to provide a better explanation and visualization of the syntax and semantics of ABAP statements and not to solve concrete programming tasks. For production application programs, a dedicated solution should therefore always be worked out for each individual case.
-There is no guarantee for either the correctness or the completeness of the code. In addition, there is no legal responsibility or liability for possible errors or their consequences, which occur through the use of the example code.
+## ⚠️ 면책조항
+본 레포지토리가 제공하는 코드 예제는 구문 예제일 뿐, 업무 시스템 환경에서 직접 사용할 목적으로 작성되지 않았습니다. 예제 코드는 실질적인 프로그래밍 작업을 해결하기 위한 것이 아닌, ABAP 구문의 문법과 의미를 보다 효과적이고 시각적으로 전달하기 위함을 주 목적으로 합니다. 따라서, 실무 응용 프로그램에서는 개별 경우에 맞는 적절한 해결방안을 찾아 활용해야 합니다. 코드의 정확성과 완전성을 보장하지 않으며, 예제 코드 사용으로 인해 발생할 수 있는 오류와 결과에 대한 법적 책임 및 의무를 지지 않습니다.
 
 <br>
 
 ## 📟 Support
-This is not intended to be a contribution repository, so please do not create pull requests. If you like to address issues or suggestions regarding additional syntax to be covered, please create an issue. However, this project is provided "as-is": there is no guarantee that raised issues will be answered or addressed in future releases.
+본 레포지토리([원본 레포지토리](https://github.com/malcano/abap-cheat-sheets))는 Contribution 레포지토리가 아니므로 pull request를 하지 마세요. 구문과 관련된 이슈나 제안이 있을 경우, 'issue'를 만들어주세요. 하지만, 본 프로젝트는 "AS-IS"대로 제공되므로 이슈에 대한 답변이 이루어지거나, 향후 릴리즈에서 문제가 해결되리라는 보장을 하지 않습니다.
 
 <br>
 
 ## 📜 License
 Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
+### For Korean Versions..
+Copyright (c) 2024 malcano. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
+
+
 
 [^1]: "A written [...] aid (such as a sheet of notes) that can be referred to for help in understanding or remembering something complex" (Definition for "cheat sheet" in Merriam-Webster Dictionary).
