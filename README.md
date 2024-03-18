@@ -221,12 +221,13 @@ Use the standalone version of the abapGit report to import the demo examples of 
 - XSLT/ST 오브젝트 import 문제가 발생하였다면, 세 `...source.xml`파일 ([zdemo_abap_st_carrhtml](./src/zdemo_abap_st_carrhtml.xslt.source.xml), [zdemo_abap_st_strhtml](./src/zdemo_abap_st_strhtml.xslt.source.xml), [zdemo_abap_xslt_fl](./src/zdemo_abap_xslt_fl.xslt.source.xml))의 코드를 직접 붙여넣고 모든 오브젝트를 활성화해보세요.
 <br>
 
-## ℹ️ More Information
-- For the system-internal version of the ABAP Keyword Documentation in 
-  - ... **classic ABAP**: Access the documentation in the SAP GUI via the transactions `ABAPDOCU` (opens the documentation directly) and `ABAPHELP` (opens an input field with which you can search the documentation content, for example, you can search for a keyword such as `SELECT`). Or, of course, choose `F1` on a keyword in your code. If you are in the SAP GUI (e.g. in `SE80`), the system-internal version opens. If you are in ADT, the documentation opens in the *ABAP Language Help* view.
-  - ... **ABAP Cloud**: In ADT, the documentation is in the *ABAP Language Help* view, where you can also search. If you choose `F1` on a keyword in your code, the documentation opens there.
-- Links to the online version of the ABAP Keyword Documentation for:
-  - **Standard ABAP**: Unrestricted ABAP language scope for [classic ABAP](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenclassic_abap_glosry.htm) → [Online version of the documentation (latest version)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap.htm). To access the online documentation for a specific ABAP version, e.g. 7.54, you can select the version from the drop-down list [here](https://help.sap.com/docs/ABAP?locale=en-US) (*latest* is preselected). The *ABAP* link under *Development* will take you to the documentation of choice.
+## ℹ️ 더 많은 정보 
+- 시스템 내부 버전에 따른 ABAP Keyword 문서:
+  - **클래식 ABAP**: T-Code `ABAPDOCU`(문서 직접 열기)와 `ABAPHELP`(문서 내용을 검색할 수 있는 인풋 필드 보기, `SELECT`와 같은 키워드를 검색 가능)를 통해 SAP GUI의 문서를 조회합니다. 물론 코드의 키워드에서 `F1`을 눌러서 확인할 수도 있습니다. SAP GUI(e.g. in `SE80`)에서 접근할 경우, 시스템 내장 버전이 열립니다. ADT 환경에서는 *ABAP Language 도움말* 보기에서 열립니다.
+  - **ABAP Cloud**: 
+  ADT 환경에서 `ABAP Language 도움말` 보기에서 검색기능을 사용하여 문서를 탐색할 수 있습니다.코드의 키워드에서 `F1`을 눌러서 확인할 수도 있습니다. 
+- 온라인 버전 ABAP Keyword 문서:
+  - **스탠다드 ABAP**: ABAP 언어 버전 무관 [클래식 ABAP](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenclassic_abap_glosry.htm)문서 → [온라인 버전 문서 (최신 버전)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap.htm). 7.54와 같이 특정 ABAP 버전의 온라인 문서를 확인하려면 [여기](https://help.sap.com/docs/ABAP?locale=en-US)의 드롭다운 리스트에서 해당 버전을 선택해주세요.(기본적으로 *최신* 버전이 선택됩니다.) *Development* 하단 *ABAP* 링크를 클릭하면 선택한 문서로 이동합니다.
   - **ABAP for Cloud Development**: Restricted ABAP language scope for developments, for example, in the SAP BTP ABAP environment → [Online version of the documentation](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm)
 - For demonstration examples of the ABAP Keyword Documentation in classic ABAP, see the `SABAPDEMOS` package.  This package contains all the examples used in the ABAP Keyword Documentation. For the context, class/program name, etc., see the [example page](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap_examples.htm), which is also available in the system-internal SAP GUI version as a node in the topic tree and which summarizes the executable examples. Of course, you can also find the example topics in the context of the individual topic of the ABAP keyword documentation. The example topics are marked with a ⚙️ icon:
 
