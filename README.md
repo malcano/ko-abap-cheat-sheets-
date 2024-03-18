@@ -73,7 +73,7 @@ ABAP 버전에 따른 ABAP 언어 요소의 차이를 확인할 수 있습니다
 |[인터널 테이블 (Internal Tables)](01_Internal_Tables.md)| 인터널 테이블 생성, 삽입, 읽기, 정렬, 수정 | [zcl_demo_abap_internal_tables](./src/zcl_demo_abap_internal_tables.clas.abap)   |
 |[스트럭쳐 (구조체) (Structures)](02_Structures.md)| 스트럭쳐 활용 기초 |  [zcl_demo_abap_structures](./src/zcl_demo_abap_structures.clas.abap)  |
 |[ABAP SQL](03_ABAP_SQL.md)| `SELECT`를 사용하여 데이터베이스 테이블 읽기, `INSERT`, `UPDATE`,`MODIFY`,`DELETE`를 사용하여 데이터베이스 테이블의 데이터 수정하기 | [zcl_demo_abap_sql](./src/zcl_demo_abap_sql.clas.abap)   |
-|[ABAP 오브젝트에 대해 알아보기 (ABAP Object Orientation) ](04_ABAP_Object_Orientation.md)| Working with objects and components, concepts such as inheritance, interfaces, and more 상속, 인터페이스 등 오브젝트와 컴포넌트 활용하기 | [zcl_demo_abap_objects](./src/zcl_demo_abap_objects.clas.abap) |
+|[ABAP 오브젝트에 대해 알아보기 (ABAP Object Orientation) ](04_ABAP_Object_Orientation.md)|상속, 인터페이스 등 오브젝트와 컴포넌트 활용하기 | [zcl_demo_abap_objects](./src/zcl_demo_abap_objects.clas.abap) |
 |[생성자 표현식(Constructor Expressions)](05_Constructor_Expressions.md)| `VALUE`, `CORRESPONDING`, `NEW`, `CONV`, `EXACT`, `REF`, `CAST`, `COND`, `SWITCH`, `FILTER`, `REDUCE` 등의 연산자를 활용한 생성자 표현식과 `FOR`, `LET`를 활용한 반복자 표현식 | [zcl_demo_abap_constructor_expr](./src/zcl_demo_abap_constructor_expr.clas.abap) |
 |[동적 프로그래밍(Dynamic Programming)](06_Dynamic_Programming.md)| 동적 프로그래밍을 위한 요소로서의 필드 심볼과 데이터 레퍼런스, 동적 ABAP 구문 구성과 runtime type services (RTTS) i. e. runtime type identification (RTTI), runtime type creation (RTTC) |  [zcl_demo_abap_dynamic_prog](./src/zcl_demo_abap_dynamic_prog.clas.abap)  |
 |[문자열 처리 (String Processing)](07_String_Processing.md)| 문자열 생성, 값 할당, 문자열 변경, 문자열 템플릿, 문자열 힙치기, 나누기, 수정, 탐색, 대치, 정규표현식 |  [zcl_demo_abap_string_proc](./src/zcl_demo_abap_string_proc.clas.abap)  |
