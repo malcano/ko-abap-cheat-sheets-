@@ -89,7 +89,7 @@ ABAP 버전에 따른 ABAP 언어 요소의 차이를 확인할 수 있습니다
 |[Dynpro](18_Dynpro.md)|Dynpro를 중심으로 한 구문 개요 <br>💡[클래식 ABAP](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenclassic_abap_glosry.htm)에만 해당하는 예제를 포함하고 있습니다.|프로그램 `ZDEMO_ABAP_DYNPRO`|
 |[Selection Screen과 클래식 List (Selection Screens and Classic Lists)](20_Selection_Screens_Lists.md)|Selection-SCreen과 class list에 대한 개요. SAP List Viewr (ALV)와 관련된 내용을 포함하고 있습니다. <br>💡[클래식 ABAP](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenclassic_abap_glosry.htm)에만 해당하는 예제를 포함하고 있습니다.|프로그램 `ZDEMO_ABAP_SELSCR_LISTS_INTRO` ("intro" 프로그램: 다른 예제 프로그램을 실행할 수 있는 프로그램)|
 |[ABAP에서 XML과 JSON 활용하기 (Working with XML and JSON in ABAP)](21_XML_JSON.md)| 클래스 라이브러리를 활용하여 XML처리와 XSLT와 Simple Transformations (ST)를 활용한 XML 변환, serialization(직렬화, ABAP -> XML ), deserealization(역직렬화, XML -> ABAP), JSON 데이터 활용|[zcl_demo_abap_xml_json](./src/zcl_demo_abap_xml_json.clas.abap) |
-|[Misc ABAP Classes](22_Misc_ABAP_Classes.md)|Contains a selection of ABAP classes, serving as a quick introduction, along with code snippets to explore the functionality in action|-|
+|[기타 ABAP 클래스(Misc ABAP Classes)](22_Misc_ABAP_Classes.md)|Contains a selection of ABAP classes, serving as a quick introduction ABAP 클래스의 selection 소개, 기능들을 살펴볼 수 있는 코드 스니펫이 포함되어 있습니다|-|
 
 <br>
 
