@@ -134,24 +134,24 @@ abapGit 플러그인을 사용하여 <em>ABAP Cheat Sheets</em>를 설치하세�
 https://github.com/SAP-samples/abap-cheat-sheets.git
 ```
 6. *Next* 선택.
-7. On the *Branch and Package Selection* screen, enter the name of the created package (for example, *ZABAP_CHEAT_SHEETS*) in the *Package* field.
-8. Choose *Next*.
-9.  On the *Select Transport Request* screen, select the created transport request that is suitable for the demo content and choose *Finish* to link the Git repository to your ABAP cloud project. If the created package is already assigned to a transport request for the demo content, and a message appears that an object is already locked in a transport request, choose *Finish*, too.
-10. In the *abapGit Repositories* view, filter for your package. The repository appears in the *abapGit Repositories* view with the status <em>Linked</em>.
-11. Right-click on the new abapGit repository and choose *Pull...* to start the cloning of the repository contents.
-12. On the *Branch and Package Selection* screen, choose *Next*.
-13. If the *Locally Modified Object* screen is displayed, select the objects (for example, the package to automatically select all artifacts) from the list and choose *Next*.
-14. On the next screen, select a transport request and choose *Finish*. Same as above, if an *object already locked* message is displayed, choose *Finish* as well. The status in the *abapGit Repositories* view changes to <em>Pull running...</em>. Note that the pull run may take several minutes.
-15. Once the cloning is complete, the status changes to *Pulled Successfully*. You may need to refresh the *abapGit Repositories* view to see the progress of the import. To do this, choose the  *Refresh* icon in the upper right corner of the view.
-16. Refresh your project tree. For example, in ADT, right-click the package and choose *Refresh*. The package should contain all the artifacts from the GitHub repository.
-17. Make sure that all artifacts are active. To activate all inactive development objects, choose the *Activate all inactive ABAP development objects* button from the menu (or choose *CTRL+Shift+F3*).
+7. *Branch and Package Selection* 화면에서, 앞서 생성한 *ZABAP_CHEAT_SHEETS*과 같은 이름으로 생성한 패키지명을 *Package* 에 입력하세요.
+8. *Next* 선택.
+9. *Select Transport Request* 화면에서, 데모 콘텐츠를 위해 생성한 Transport Request 를 선택하고 *Finish*를 눌러 ABAP cloud project에 Git 저장소를 연결하세요. 이미 데모 콘텐츠를 위한 Transport Request에 생성한 패키지가 assign되어있다면, 락이 잡혔다는 메세지가 표시되고 이런 경우에도 *Finish*를 누르시면 됩니다.
+10. *abapGit Repositories* 뷰에서 패키지를 필터링합니다. *abapGit Repositories* 뷰에 리포지토리가  <em>Linked</em> 상태로 표시됩니다.
+11. 신규 생성된 new abapGit repository를 마우스 우클릭하고 *Pull...* 를 선택하여 리포지토리 콘텐츠를 cloning합니다. 
+12. *Branch and Package Selection* 화면에서 *Next* 선택.
+13. *Locally Modified Object* 가 화면에 표시되면, 목록에서 오브젝트(ex. the package to automatically select all artifacts)를 선택하고 *Next* 선택.
+14. 다음 화면에서 Transport Request 를 선택하고 *Finish* 선택. 앞서 기술한 것과 같이,  *object already locked* 메세지가 보여지는 경우에도 *Finish* 선택. *abapGit Repositories* 뷰가 <em>Pull running...</em> 상태로 변경됩니다. 이 작업은 수 십분이 소요될 수 있습니다.
+15. Cloning 작업이 완료되면, *Pulled Successfully* 상태로 변경됩니다. 뷰의 우상단 *Refresh* 아이콘을 눌러 *abapGit Repositories*를 새로고침하면 Imporing 진행상태를 확인할 수 있습니다.
+16. Project Tree를 새로고침 하세요. ADT에서는 패키지를 우클릭하여 *Refresh*를 선택합니다. 패키지에는 GitHub의 모든 아티팩트가 포함되어 있어야 합니다.
+17. 모든 아티팩트가 활성화되었는지 확인합니다. 메뉴의 *Activate all inactive ABAP development objects* 버튼이나 단축키 *CTRL+Shift+F3*를 눌러 비활성화된 모든 개발 오브젝트를 활성화할 수 있습니다.
 </details>
 
 <details>
   <summary>2b) Classic ABAP (on-premise ABAP systems)</summary>
 <br>
 
-**Prerequisites**
+**필수조건**
 - [x] You are running an [ABAP release](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abennews-75.htm) for which examples are available. See the different branches of the repository. For example, you can find out about your ABAP release by checking the value of `sy-saprl`:  
   ```abap
   DATA rel LIKE sy-saprl.
