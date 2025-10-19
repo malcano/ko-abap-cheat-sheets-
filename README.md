@@ -36,7 +36,6 @@ ABAP cheat sheets[^1] ...
 -  [SAP BTP ABAP 환경](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abensap_btp_abap_env_glosry.htm) (*main* branch; ABAP language version: [ABAP for Cloud Development](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenabap_for_cloud_dev_glosry.htm))과 온프레미스 ABAP 시스템 ([classic ABAP](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenclassic_abap_glosry.htm); the repository branches other than *main*)에서 [abapGit](https://abapgit.org/)을 사용하여 간단한 실행 가능한 데모 예제를 작동시키고, 확인해볼 수 있습니다. 
 - 각 챕터의 링크를 통해 용어집과 **ABAP 키워드 문서** (*F1 도움말*)를 통해 더 자세한 내용을 확인할 수 있습니다.
 
-<details>
 <summary>💡 확인해주세요!</summary>
 <br>
 
@@ -53,8 +52,6 @@ ABAP 버전에 따른 ABAP 언어 요소의 차이를 확인할 수 있습니다
 또한, [여기](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenreleased_apis.htm)를 눌러 릴리즈된 API를 확인할 수 있습니다.
 - 모든 ABAP 치트 시트를 한 레포지토리에 보관할 목적으로, 클래식 ABAP에만 해당하는 ABAP 치트 시트 문서도 ABAP Cloud 예제를 위한 *main* 브랜치에 포함됩니다.
 - 클래식 ABAP용 브랜치에 포함된 예제 class는 대부분 ABAP for Cloud Development에서도 사용할 수 있습니다. 서브패키지 `TEST_ABAP_CHEAT_SHEETS_CLASSIC`는 스탠다드 ABAP과 관련된 구문을 포함하고 있으며, dynpro ABAP과 같은 키워드는 ABAP for Cloud Development에서 사용할 수 없습니다.
-
-</details>
 
 <br>
 
@@ -98,16 +95,14 @@ ABAP 버전에 따른 ABAP 언어 요소의 차이를 확인할 수 있습니다
 ABAP Cheat Sheets는 ABAP Cloud에 중점을 두고 있습니다. 레포지토리 상 *main*브랜치의 예제는 SAP BTP ABAP 환경으로 가져올 수 있도록 설계되어 있습니다.
 Classic ABAP의 경우, 레포지토리의 다른 브랜치에서 적절한 버전 (*v757* 는 ABAP 버전 7.57입니다)을 선택하여 샌드박스 SAP 시스템으로 예제를 가져올 수 있습니다. 
 시스템 환경에 맞는 정보를 아래에서 확인하고 필요한 작업을 수행해주세요.
-<details>
+
   <summary>1) General info</summary>
   <br>
 
 - 데이터베이스 테이블과 같은 일부 **DDIC 아티팩트**는 리포지토리의 일부입니다. 이 테이블은 예제가 독립적으로 작동될 수 있기 위해 사용되는 항목입니다. 예제의 정상적인 작동을 위해선 모든 항목을 임포팅하여야 합니다. 
 - 예제의 대부분은 **ADT 콘솔에 출력되도록** 설계되어 있습니다. 임포팅 후 *F9*을 통해 예제를 ADT에서 실행하고 츌력값을 ADT 콘솔에서 확인할 수 있습니다. classic ABAP용 브랜치에 포함된 프로그램은 *F8*을 통해 실행할 수 있습니다.
 - 예제 코드에는 해설과 콘텍스트 설정을 위한 **주석과 설명**을 포함하고 있습니다.
-</details>
 
-<details>
   <summary>2a) SAP BTP ABAP 환경</summary>
   <br>
 
@@ -118,7 +113,7 @@ Classic ABAP의 경우, 레포지토리의 다른 브랜치에서 적절한 버�
 - SAP BTP ABAP 환경 인스턴스에 접근할 수 있도록 ABAP cloud project in ADT 를 생성(더 많은 정보는 [여기](https://help.sap.com/viewer/5371047f1273405bb46725a417f95433/Cloud/en-US/99cc54393e4c4e77a5b7f05567d4d14c.html) 를 통해 확인).
 - [여기](http://eclipse.abapgit.org/updatesite/)에서 [abapGit](https://github.com/abapGit/eclipse.abapgit.org) plug-in for ADT 설치.
 
-**코드 임포팅*
+**코드 임포팅**
 
 abapGit 플러그인을 사용하여 <em>ABAP Cheat Sheets</em>를 설치하세요. 
 아래 절차 참조:
@@ -145,68 +140,63 @@ https://github.com/SAP-samples/abap-cheat-sheets.git
 15. Cloning 작업이 완료되면, *Pulled Successfully* 상태로 변경됩니다. 뷰의 우상단 *Refresh* 아이콘을 눌러 *abapGit Repositories*를 새로고침하면 Imporing 진행상태를 확인할 수 있습니다.
 16. Project Tree를 새로고침 하세요. ADT에서는 패키지를 우클릭하여 *Refresh*를 선택합니다. 패키지에는 GitHub의 모든 아티팩트가 포함되어 있어야 합니다.
 17. 모든 아티팩트가 활성화되었는지 확인합니다. 메뉴의 *Activate all inactive ABAP development objects* 버튼이나 단축키 *CTRL+Shift+F3*를 눌러 비활성화된 모든 개발 오브젝트를 활성화할 수 있습니다.
-</details>
 
-<details>
   <summary>2b) Classic ABAP (on-premise ABAP systems)</summary>
 <br>
 
 **필수조건**
-- [x] You are running an [ABAP release](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abennews-75.htm) for which examples are available. See the different branches of the repository. For example, you can find out about your ABAP release by checking the value of `sy-saprl`:  
+- 예제를 정상적으로 실행하기 위해선 [ABAP release](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abennews-75.htm)를 확인해야 합니다. 리포지토리의 다른 브랜치를 확인해주세요. `sy-saprl`값을 확인하여 사용 중인 ABAP release를 확인할 수 있습니다.:  
   ```abap
   DATA rel LIKE sy-saprl.
   rel = sy-saprl.
   BREAK-POINT.
   ```
-- [x] Before importing the code, you have performed a system-wide search for classes named *ZCL_DEMO_ABAP**, for example, to avoid errors when you try to import the code. If someone has already imported the content into the system, you can simply check out that imported version and proceed to the step *3) Run the code*.
-- [x] You have downloaded and installed the ABAP development tools for Eclipse (ADT). Make sure that you are using the latest version, as indicated on the [installation page](https://tools.hana.ondemand.com/#abap).
-- [x] You have created an ABAP project in ADT that allows you to access your application server as mentioned above. Your login language is English.
-- [x] You have downloaded and installed the standalone version of the abapGit report. Make sure you are using the latest version, as indicated on the [installation page](https://docs.abapgit.org/). You can create a report, for example, *zabapgit_standalone*, and copy and paste [this code](https://raw.githubusercontent.com/abapGit/build/main/zabapgit_standalone.prog.abap) into the program.
+- 코드를 가져오기 전, `ZCL_DEMO_ABAP*`과 같은 이름의 클래스가 이미 시스템에 존재하는지 확인하여 코드 임포팅 시 에러가 발생하지 않도록 하세요. 이미 시스템에 임포팅된 경우, 사전에 임포팅된 항목의 버전을 확인한 후 *3) 코드 실행* 단계를 진행하시면 됩니다.
+- Eclipse 용 ABAP Development Tool (ADT)를 다운로드 및 설치해야 합니다. [설치 페이지](https://tools.hana.ondemand.com/#abap)에서 최신 버전을 사용중인지 확인하세요.
+앞서 언급한 바와 같이, application 서버에 접근할 수 있도록 ABAP project in ADT 를 생성해야 합니다. 로그인 언어는 영어로 설정.
+- standalone 버전 abapGit Report 를 다운로드 하여 설치합니다. [설치 페이지](https://docs.abapgit.org/)에서 최신 버전을 사용하고 있는지 확인하세요.
+*zabapgit_standalone*과 같은 이름으로 Report 를 생성한 후, [이 코드](https://raw.githubusercontent.com/abapGit/build/main/zabapgit_standalone.prog.abap)를 복사-붙여넣기하세요.
 
-**Import Code**
+**코드 임포팅**
 
-Use the standalone version of the abapGit report to import the demo examples of the ABAP cheat sheets by performing the following steps:
-1. In your ABAP project, create a package, such as *TEST_ABAP_CHEAT_SHEETS* as a target package suitable for demo content (for example, by using *LOCAL* as the software component).
-2. Add the package to the *Favorite Packages* in the *Project Explorer* view in ADT.
-3. Run the standalone version of the abapGit report.
-4. Choose the *New Online* button. If the button is not available, for example, if another repository is already open, choose the *Repository List* button.
-5. On the *New Online Repository* screen, make the following entries:
-   - ***Git Repository URL***:
+아래 순서대로 standalone 버전 abapGit 리포트 프로그램을 사용하여 ABAP cheat sheets의 예제 코드를 가져오세요.:
 
+1. ABAP 프로젝트에서 *TEST_ABAP_CHEAT_SHEETS*와 같은 이름으로 데모 콘텐츠용 대상 패키지를 생성합니다(예: 소프트웨어 컴포넌트로 *LOCAL* 사용).
+2. ADT의 *Project Explorer* 뷰에서 *Favorite Packages*에 위에서 생성한 패키지를 추가합니다.
+3. standalone 버전 abapGit report 프로그램 실행.
+4. *New Online* 버튼 선택. 
+다른 리포지토리가 이미 열려있는 등, 버튼이 사용불가한 경우 *Repository List* 버튼을 클릭합니다.
+5. *New Online Repository* 화면에서, 아래 항목을 입력합니다.:
+   - ***Git 리포지토리 URL***:
       ```
       https://github.com/SAP-samples/abap-cheat-sheets.git
       ```
-
-   - ***Package***: Your demo package, for example, *TEST_ABAP_CHEAT_SHEETS*
-   - ***Branch***: Choose the button with the 3 dots to the right of the input field. In the pop-up window, select the appropriate branch, e.g. *v757* if your ABAP release is 7.57, and choose the *Continue* (✔️) button. **Note**: The examples in the *main* branch are for ABAP Cloud only. 
+   - ***Package***: 데모 패키지명, ex. *TEST_ABAP_CHEAT_SHEETS*
+   - ***Branch***: 
+   입력란 우측의 점 3개 버튼을 선택. 팝업 화면에서, 적잘한 브랜치 선택. (만약, ABAP release가 7.57이면, *v757* 선택) *Continue* (✔️) 버튼 선택. **참고**: *main* 브랜치의 예제는 ABAP Cloud 전용.
    - ***Folder Logic***: *Full*
-6. Choose *Create Online Repo*.
-7. The *Repository* screen displays the available ABAP artifacts to be imported into your ABAP system.
-8. Choose the *Pull* button. The import of the artifacts is triggered. This may take a while.
-9. If the *Inactive Objects* popup is displayed, select all artifacts and choose *Continue* (✔️).
-10.	When the cloning is complete, refresh your project tree. For example, in ADT, right-click on the package and choose *Refresh*. The package should contain all artifacts from the GitHub repository.
-11. Make sure that all artifacts are active. To activate all inactive development objects, choose the *Activate all inactive ABAP development objects* button from the menu (or choose *CTRL+Shift+F3*).
+6. *Create Online Repo* 선택.
+7. ABAP system으로 가져올 수 있는 ABAP 아티팩트가 *Repository* 화면에 표시됩니다.
+8. *Pull* 버튼을 선택하면 아티팩트를 가져오기 시작합니다. 이 작업은 시간이 다소 소요될 수 있습니다.
+9. *Inactive Objects* 팝업이 표시되면, 모든 아티팩트를 선택하고 *Continue* (✔️) 버튼을 선택합니다.
+10.	Cloning 작업이 완료되면, project tree를 새로고침하세요. 
+ADT 환경의 경우, 패키지를 우클릭하여 *Refresh*를 선택합니다. 패키지에는 GitHub 리포지토리의 모든 아티팩트가 포함되어있어야 합니다.
+11. 모든 아티팩트가 활성화되었는지 확인합니다. 메뉴의 *Activate all inactive ABAP development objects* 버튼이나 단축키 *CTRL+Shift+F3*를 눌러 비활성화된 모든 개발 오브젝트를 활성화할 수 있습니다.
 
-</details>
-
-<details>
-  <summary>3) Run the code</summary>
+  <summary>3) 코드 실행</summary>
 <br>
 
-- Open the package you created containing the imported ABAP artifacts in the ABAP development tools for Eclipse (ADT).
-- Classes: 
-  - Open one of the ABAP cheat sheet example classes listed in the [ABAP Cheat Sheets Overview](#-abap-cheat-sheets-overview) section, for example, *zcl_demo_abap_string_proc*. The classes are located in the *Source Code Library* → *Classes* folder.
-  - Choose *F9* to run the class. Alternatively, choose *Run* → *Run As* → *2 ABAP Application (Console)* from the menu. 
-  - Check the console output.
-    > **💡 Note**<br>
-    >- Check the notes on the context and the ABAP syntax used that are included as comments in the class.
-    >- Due to the amount of output in the console, the examples include numbers (e.g. 1) ..., 2) ..., 3) ...) that represent the headers of each example code section. Also, in most cases, the variable name is displayed in the console. Therefore, to find the relevant output in the console more easily and quickly, simply search the console for the number (e.g. search for *3)* for the particular output) or variable name (*CTRL+F* in the console), or use breakpoints in the code to check variables in the debugger.
-    >- You may want to clear the console by right-clicking in the console and choosing *Clear* before running another demo class to avoid confusing the output of multiple classes.
-- Programs:
-  - The programs included in the repository can be executed with *F8* (or *Run* → *Run As* → *1 ABAP Application*). 
-
-
-</details>
+- ABAP development tools for Eclipse (ADT)에서 임포팅한 ABAP 아티팩트가 포함된 패키지를 엽니다.
+- 클래스: 
+- [ABAP Cheat Sheets Overview](#-abap-cheat-sheets-overview) 섹션에 나열된 ABAP 치트 시트 예제 클래스 중 하나를 엽니다. 예를 들어, *zcl_demo_abap_string_proc*는 *Source Code Library* → *Classes* 폴더에서 찾을 수 있습니다.
+- *F9*를 눌러 클래스를 실행합니다. 메뉴에서 *Run* → *Run As* → *2 ABAP Application (Console)*와 같이 선택하여 실행할 수도 있습니다.
+  - 콘솔 출력 결과를 확인하세요.
+    > **💡 참고**<br>
+    >- 클래스 내 주석으로 포함된 내용과 ABPA 구문 용례를 확인하세요.
+    >- 콘솔에 출력되는 양이 많기 때문에, 예제에서는 각 예제 코드 섹션의 헤더를 나타내는 번호 (e.g. 1) ..., 2) ..., 3) ...) 가 포함됩니다. 또한, 대부분의 변수명은 콘솔에 표시되며 콘솔에서 관련 출력값을 찾으려면 해당 출력에 해당하는 번호나 변수명을 콘솔에서 검색(*CTRL+F*)하거나, breakpoint를 사용하여 debugger에서 변수값을 확인하세요.
+    >- 데모 클래스의 출력값이 헷갈리지 않도록 다른 예제를 실행하기 전에 콘솔에서 마우스 우클릭을 하여 *Clear*를 선택하고 콘솔을 비우는 것이 좋습니다.
+- 프로그램:
+  - 리포지토리에 저장된 프로그램은 *F8* (또는 *Run* → *Run As* → *1 ABAP Application*) 로 실행할 수 있습니다. 
 
 <br>
 
