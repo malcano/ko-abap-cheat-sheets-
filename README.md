@@ -102,41 +102,38 @@ Classic ABAP의 경우, 레포지토리의 다른 브랜치에서 적절한 버�
   <summary>1) General info</summary>
   <br>
 
-- Some **DDIC artifacts**, such as database tables, are part of the repository. They are used by the examples to ensure self-contained examples. All artifacts must be imported for all examples to work.
-- Most examples are designed to **display some output in the ADT console**. Once successfully imported, you can **run** the examples in ADT by choosing *F9* to display the output in the ADT console. The programs included in the branches for classic ABAP can be executed with *F8*.
-- The examples **include descriptions and comments** in the code to provide explanations and set the context.
+- 데이터베이스 테이블과 같은 일부 **DDIC 아티팩트**는 리포지토리의 일부입니다. 이 테이블은 예제가 독립적으로 작동될 수 있기 위해 사용되는 항목입니다. 예제의 정상적인 작동을 위해선 모든 항목을 임포팅하여야 합니다. 
+- 예제의 대부분은 **ADT 콘솔에 출력되도록** 설계되어 있습니다. 임포팅 후 *F9*을 통해 예제를 ADT에서 실행하고 츌력값을 ADT 콘솔에서 확인할 수 있습니다. classic ABAP용 브랜치에 포함된 프로그램은 *F8*을 통해 실행할 수 있습니다.
+- 예제 코드에는 해설과 콘텍스트 설정을 위한 **주석과 설명**을 포함하고 있습니다.
 </details>
 
 <details>
-  <summary>2a) SAP BTP ABAP environment</summary>
+  <summary>2a) SAP BTP ABAP 환경</summary>
   <br>
 
-**Prerequisites**
-- [x] You have access to an SAP BTP ABAP Environment instance (see [here](https://blogs.sap.com/2018/09/04/sap-cloud-platform-abap-environment) for additional information).
-- [x] You have downloaded and installed the ABAP development tools for Eclipse (ADT). Make sure that you are using the latest version, as indicated on the [installation page](https://tools.hana.ondemand.com/#abap).
-- [x] Before importing the code, you have performed a system-wide search for classes named `ZCL_DEMO_ABAP*`, for example, so that you do not run into errors when you try to import the code. If someone has already imported the content into the system, you can simply check out that imported version and proceed to the step *3) Run the code*.
-- [x] You have created an ABAP cloud project in ADT that allows you to access your SAP BTP ABAP Environment instance (see [here](https://help.sap.com/viewer/5371047f1273405bb46725a417f95433/Cloud/en-US/99cc54393e4c4e77a5b7f05567d4d14c.html) for more information). Your login language is English.
-- [x] You have installed the [abapGit](https://github.com/abapGit/eclipse.abapgit.org) plug-in for ADT from the [update site](http://eclipse.abapgit.org/updatesite/).
+**필수조건**
+- SAP BTP ABAP 환경 인스턴스에 접근 가능해야 합니다. (추가 정보는 [링크](https://blogs.sap.com/2018/09/04/sap-cloud-platform-abap-environment) 참조)
+- Eclipse 용 ABAP Development Tool (ADT)를 다운로드 및 설치해야 합니다. [설치 페이지](https://tools.hana.ondemand.com/#abap)에서 최신 버전을 사용중인지 확인하세요.
+- 코드를 가져오기 전, `ZCL_DEMO_ABAP*`과 같은 이름의 클래스가 이미 시스템에 존재하는지 확인하여 코드 임포팅 시 에러가 발생하지 않도록 하세요. 이미 시스템에 임포팅된 경우, 사전에 임포팅된 항목의 버전을 확인한 후 *3) 코드 실행* 단계를 진행하시면 됩니다.
+- SAP BTP ABAP 환경 인스턴스에 접근할 수 있도록 ABAP cloud project in ADT 를 생성(더 많은 정보는 [여기](https://help.sap.com/viewer/5371047f1273405bb46725a417f95433/Cloud/en-US/99cc54393e4c4e77a5b7f05567d4d14c.html) 를 통해 확인).
+- [여기](http://eclipse.abapgit.org/updatesite/)에서 [abapGit](https://github.com/abapGit/eclipse.abapgit.org) plug-in for ADT 설치.
 
+**코드 임포팅*
 
-**Import Code**
+abapGit 플러그인을 사용하여 <em>ABAP Cheat Sheets</em>를 설치하세요. 
+아래 절차 참조:
 
-Use the abapGit plug-in to install the <em>ABAP Cheat Sheets</em> by carrying out the following steps:
-
-1. In your ABAP cloud project, create a package, for example, *ZABAP_CHEAT_SHEETS* as the target package. It is recommended that you assign the package to a transport request that is suitable for demo content.
-2. Add the package to the *Favorite Packages* in the *Project Explorer* view in ADT.
-3. To add the <em>abapGit Repositories</em> view to the <em>ABAP</em> perspective, choose *Window* → *Show View* → *Other...* from the menu bar and choose *abapGit Repositories*.
-4. In the <em>abapGit Repositories</em> view, click the `+` icon in the upper right corner of the ADT tab to link a new abapGit repository.
+1. ABAP 클라우드 프로젝트에서 *ZABAP_CHEAT_SHEETS*과 같은 형테로 패키지를 생성하세요. 데모 컨텐츠를 위한 transport request 에 패키지를 할당하는 것을 권장합니다.
+2. ADT의 *Project Explorer* 뷰에서 패키지를 *Favorite Packages*에 추가합니다.
+3. <em>abapGit Repositories</em>뷰를 <em>ABAP</em> perspective에 추가하기 위해선, 메뉴 바에서 *Window* → *Show View* → *Other...*를 선택하고 *abapGit Repositories*를 선택하세요.
+4. <em>abapGit Repositories</em> 뷰에서 ADT 탭 우상단의 `+` 아이콘을 클릭하여 새 abapGit 리포지토리를 연결합니다.
   <br>![ADT](./files/abapGit_Repositories.png)
 
-5. The *Link abapGit Repository* popup appears. Enter the following URL:
-
+5. *Link abapGit Repository* 팝업이 나타나면 아래 URL을 입력하세요.
 ```
 https://github.com/SAP-samples/abap-cheat-sheets.git
 ```
-
-6. Choose *Next*.
-
+6. *Next* 선택.
 7. On the *Branch and Package Selection* screen, enter the name of the created package (for example, *ZABAP_CHEAT_SHEETS*) in the *Package* field.
 8. Choose *Next*.
 9.  On the *Select Transport Request* screen, select the created transport request that is suitable for the demo content and choose *Finish* to link the Git repository to your ABAP cloud project. If the created package is already assigned to a transport request for the demo content, and a message appears that an object is already locked in a transport request, choose *Finish*, too.
