@@ -27,7 +27,7 @@
 ## 개요
 Internal Table은...
 
-- [다이나믹 데이터 오브젝트](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abendynamic_data_object_glosry.htm)입니다, i.e. 
+- [동적(dynamic) 데이터 오브젝트](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abendynamic_data_object_glosry.htm)입니다, i.e. 
 메모리 사용을 제외한 모든 속성은 [데이터 타입](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abendata_type_glosry.htm)에 따라 정적으로(statically) 결정됩니다.
 - 동일한 데이터 타입의 가변적인 순차 행으로 구성됩니다.
 - [Table Type](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_type_glosry.htm)을 데이터 타입으로 가져가고([Complex Data Type](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abencomplex_data_type_glosry.htm)), 다음 속성을 정의합니다. 
