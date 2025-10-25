@@ -2,47 +2,44 @@
 
 # Internal Tables
 
-- [Internal Tables](#internal-tables)
-  - [Introduction](#introduction)
-  - [Basic Properties of Internal Tables](#basic-properties-of-internal-tables)
-  - [Table Keys in Internal Tables (Primary, Secondary, Standard, Empty)](#table-keys-in-internal-tables-primary-secondary-standard-empty)
-  - [Creating Internal Tables and Types](#creating-internal-tables-and-types)
-  - [Filling and Copying Internal Tables](#filling-and-copying-internal-tables)
-    - [Excursions with Internal Tables](#excursions-with-internal-tables)
-  - [Reading from Internal Tables](#reading-from-internal-tables)
-  - [Processing Multiple Internal Table Lines Sequentially](#processing-multiple-internal-table-lines-sequentially)
-    - [Iteration Expressions](#iteration-expressions)
-  - [Sorting Internal Tables](#sorting-internal-tables)
-  - [Modifying Internal Table Content](#modifying-internal-table-content)
-  - [Deleting Internal Table Content](#deleting-internal-table-content)
-  - [Excursions](#excursions)
-    - [Improving Read Performance with Secondary Table Keys](#improving-read-performance-with-secondary-table-keys)
-    - [Searching and Replacing Substrings in Internal Tables with Character-Like Data Types](#searching-and-replacing-substrings-in-internal-tables-with-character-like-data-types)
-    - [Ranges Tables](#ranges-tables)
-  - [More Information](#more-information)
-  - [Executable Example](#executable-example)
+- [Internal Table](#internal-tables)
+  - [개요](#개요)
+  - [Internal Table의 기본 속성](#internal-table의-기본-속성)
+  - [Internal Table의 Table Key (Primary, Secondary, Standard, Empty)](#internal-table의-table-key-primary-secondary-standard-empty)
+  - [Internal Table과 Type 생성](#internal-table과-type-생성)
+  - [Internal Table 삽입 및 복사](#internal-table-삽입-및-복사)
+    - [Internal Table 살펴보기](#internal-table-살펴보기)
+  - [Internal Table 읽기](#internal-table-읽기)
+  - [Internal Table 의 여러 행 순차 처리](#internal-table의-여러-행-순차-처리)
+    - [반복 표현식](#반복-표현식)
+  - [Internal Table 정렬](#internal-table-정렬)
+  - [Internal Table 콘텐츠 수정](#internal-table-콘텐츠-수정)
+  - [Internal Table 콘텐츠 삭제](#internal-table-콘텐츠-삭제)
+  - [살펴보기](#살펴보기)
+    - [Secondary Table Key를 통해 읽기 성능 향상시키기](#internal-table의-table-key-primary-secondary-standard-empty)
+    - [Character-Like 데이터 타입으로 Internal Table의 Substring 탐색 및 대치](#character-like-데이터-타입으로-internal-table의-substring-탐색-및-대치)
+    - [Ranges Table](#ranges-tables)
+  - [추가 정보](#추가-정보)
+  - [실행 가능 예제](#실행-가능-예제)
 
 
 ## Introduction
+## 개요
+Internal Table은...
 
-Internal Tables ...
-
-- are [dynamic data objects](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abendynamic_data_object_glosry.htm), i.e. all properties apart from the memory consumption are determined statically by the [data type](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abendata_type_glosry.htm).
-- consist of a variable sequence of lines of the same data type. 
-- have a [table type](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_type_glosry.htm) as its data type (it is a [complex data type](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abencomplex_data_type_glosry.htm)), which defines the following properties: 
-  - [line type](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenrow_type_glosry.htm)
-  - [table category](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_category_glosry.htm)
-  - [table key](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_key_glosry.htm)
-- are used when a variable data set of a random data type needs to be processed in a structured way.
-- allow access to individual table lines via a [table index](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_index_glosry.htm) or a [table key](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_key_glosry.htm).
+- [다이나믹 데이터 오브젝트](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abendynamic_data_object_glosry.htm)입니다, i.e. 
+메모리 사용을 제외한 모든 속성은 [데이터 타입](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abendata_type_glosry.htm)에 따라 정적으로(statically) 결정됩니다.
+- 동일한 데이터 타입의 가변적인 순차 행으로 구성됩니다.
+- [Table Type](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_type_glosry.htm)을 데이터 타입으로 가져가고([Complex Data Type](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abencomplex_data_type_glosry.htm)), 다음 속성을 정의합니다. 
+  - [Line Type](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenrow_type_glosry.htm)
+  - [Table Category](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_category_glosry.htm)
+  - [Table Key](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_key_glosry.htm)
+- 임의의 데이터 타입의 가변적인 데이터셋을 구조화된 방법(structured way)으로 처리되어야 할 때 사용합니다.
+- [Table 인덱스](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_index_glosry.htm)나 [Table key](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_key_glosry.htm)를 통해 개별 Table 행에 접근할 수 있습니다..
 
 <p align="right"><a href="#top">⬆️ back to top</a></p>
 
-## Basic Properties of Internal Tables
-
-<details>
-  <summary>Expand to view the details</summary>
-  <!-- -->
+## Internal Table의 기본 속성
 
 **Line Type**
 
@@ -87,13 +84,11 @@ Internal Tables ...
 **Further information**
 - [Internal Tables - Overview](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenitab_oview.htm)
 - [Programming guidelines: Internal Tables (F1 docu for standard ABAP)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenadmin_costs_dyn_mem_obj_guidl.htm)
-</details>
 
 <p align="right"><a href="#top">⬆️ back to top</a></p>
 
-## Table Keys in Internal Tables (Primary, Secondary, Standard, Empty)
+## Internal Table의 Table Key (Primary, Secondary, Standard, Empty)
 
-<details>
   <summary>Expand to view the details</summary>
   <!-- -->
 
@@ -158,12 +153,11 @@ Internal Tables ...
 > - See examples of internal table declarations using the table keys mentioned above in the following section.
 > - See an example that uses secondary table keys [below](#improving-read-performance-with-secondary-table-keys).
  
-</details>
 
 <p align="right"><a href="#top">⬆️ back to top</a></p>
 
 
-## Creating Internal Tables and Types
+## Internal Table과 Type 생성
 
 You can declare internal tables and internal table types in [ABAP programs](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenabap_program_glosry.htm) using the [`TYPES`](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abaptypes.htm) and [`DATA`](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abapdata.htm) statements. The relevant syntax elements for internal tables are `TABLE OF` in combination 
 with the additions [`TYPE`](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abapdata_simple.htm)
@@ -386,14 +380,13 @@ SELECT * FROM zdemo_abap_fli INTO TABLE @FINAL(it_inline5).
 
 <p align="right"><a href="#top">⬆️ back to top</a></p>
 
-## Filling and Copying Internal Tables
+## Internal Table 삽입 및 복사
 
 You can use the ABAP keywords
 [`INSERT`](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abapinsert_itab.htm)
 and [`APPEND`](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abapappend.htm)
 to add lines to internal tables.
 
-<details>
   <summary>Notes on using <code>APPEND</code> and <code>INSERT</code></summary>
   <!-- -->
 
@@ -427,8 +420,7 @@ to add lines to internal tables.
     -   Note: In the case of unique primary table keys, the table cannot have entries with duplicate
         keys. If a duplicate is inserted, the insertion fails and the
         system field `sy-subrc` is set to 4.
-- What to use? The recommendation is the `INSERT` statement. It covers all table and key types. Consider potential issues when you change table/key types, and you use `APPEND` in your code.         
-</details>
+- What to use? The recommendation is the `INSERT` statement. It covers all table and key types. Consider potential issues when you change table/key types, and you use `APPEND` in your code.
 <br>
 
 **Adding a line to an internal table**. The example shows both a structure that is created using the `VALUE` operator as well as an existing structure that is added.
@@ -620,7 +612,7 @@ MOVE-CORRESPONDING itab_nested1 TO itab_nested2 EXPANDING NESTED TABLES KEEPING 
 
 <p align="right"><a href="#top">⬆️ back to top</a></p>
 
-### Excursions with Internal Tables
+### Internal Table 살펴보기
 For more details on ABAP SQL, see the cheat sheet on [ABAP SQL](03_ABAP_SQL.md).
 
 **Adding multiple lines from a database table to an internal table** using
@@ -807,7 +799,7 @@ COLLECT VALUE dtype( comp1 = a comp2 = b ... ) INTO itab.
 
 <p align="right"><a href="#top">⬆️ back to top</a></p>
 
-## Reading from Internal Tables
+## Internal Table 읽기
 
 There are three different ways to specify the line to read:
 
@@ -1081,7 +1073,7 @@ DATA(number_of_lines) = lines( it ).
 
 <p align="right"><a href="#top">⬆️ back to top</a></p>
 
-## Processing Multiple Internal Table Lines Sequentially
+## Internal Table의 여러 행 순차 처리
 
 If you are interested not only in single table lines, but in the entire
 table content or in specific parts of it, you can use [`LOOP
@@ -1214,7 +1206,7 @@ LOOP AT it INTO wa FROM 6 TO 3 STEP -2.
 ENDLOOP.
 ```
 
-### Iteration Expressions
+### 반복 표현식
 
 Iteration expressions with [`FOR`](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenfor.htm) as part of certain constructor expressions allow you to create content of an internal table by evaluating one or more source tables.
 
@@ -1224,7 +1216,7 @@ The expressions are covered in the cheat sheet [Constructor Expressions](05_Cons
 
 <p align="right"><a href="#top">⬆️ back to top</a></p>
 
-## Sorting Internal Tables
+## Internal Table 정렬
 
 -   Sorted tables are stored in the memory in an automatically sorted
     order, hence, they cannot be sorted explicitly with
@@ -1286,7 +1278,7 @@ SORT itab BY table_line.
 
 <p align="right"><a href="#top">⬆️ back to top</a></p>
 
-## Modifying Internal Table Content
+## Internal Table 콘텐츠 수정
 
 As mentioned above, you can modify the content of internal table lines directly in the context of `READ TABLE` and `LOOP AT` statements using field symbols and data reference variables. You can also use table expressions for direct modification. Note that the key fields of the primary table key of sorted and hashed tables are always read-only. If you try to modify a key field, a runtime error occurs. However, this is not checked until runtime.
 
@@ -1380,7 +1372,7 @@ MODIFY it FROM line TRANSPORTING b c WHERE a < 5.
 
 <p align="right"><a href="#top">⬆️ back to top</a></p>
 
-## Deleting Internal Table Content
+## Internal Table 콘텐츠 삭제
 
 You can use [`DELETE`](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abapdelete_itab.htm) statements to delete single and multiple lines in internal tables. The following additions can be used: `USING KEY` (for specifying a table key), `FROM`/`TO` (for specifying row ranges), `STEP` (for specifying the step size), and `WHERE` (for specifying conditions).
 
@@ -1480,9 +1472,9 @@ it = VALUE #( ).
 ```
 <p align="right"><a href="#top">⬆️ back to top</a></p>
 
-## Excursions
+## 살펴보기
 
-### Improving Read Performance with Secondary Table Keys
+### Character-Like 데이터 타입으로 Internal Table의 Substring 탐색 및 대치
 
 The following example creates two demo internal tables. One without a secondary
 table key and the other with a secondary table key. Consider a scenario where you
@@ -1684,10 +1676,10 @@ SELECT * FROM @inttab AS tab
 
 <p align="right"><a href="#top">⬆️ back to top</a></p>
 
-## More Information
+## 추가 정보
 Topic [Internal Tables](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenitab.htm) in the ABAP Keyword Documentation.
 
-## Executable Example
+## 실행 가능 예제
 [zcl_demo_abap_internal_tables](./src/zcl_demo_abap_internal_tables.clas.abap)
 
 > **💡 Note**<br>
