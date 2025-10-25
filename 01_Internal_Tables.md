@@ -35,7 +35,7 @@ Internal Table은...
   - [Table Category](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_category_glosry.htm)
   - [Table Key](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_key_glosry.htm)
 - 임의의 데이터 타입의 가변적인 데이터셋을 구조화된 방법(structured way)으로 처리되어야 할 때 사용합니다.
-- [Table 인덱스](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_index_glosry.htm)나 [Table key](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_key_glosry.htm)를 통해 개별 Table 행에 접근할 수 있습니다..
+- [Table 인덱스](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_index_glosry.htm)나 [Table key](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abentable_key_glosry.htm)를 통해 개별 Table 행에 접근할 수 있습니다.
 
 <p align="right"><a href="#top">⬆️ back to top</a></p>
 
@@ -43,21 +43,21 @@ Internal Table은...
 
 **Line Type**
 
-- Defines how each line of the internal table is set up, i. e. it describes what columns the table has.
-- It can be any ABAP data type, e.g. an [elementary](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenelementary_data_type_glosry.htm) or complex data type as well as a [reference type](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenreference_type_glosry.htm).
-- In most cases, the line type is [structured](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenstructured_type_glosry.htm). In this case, the individual components of a line are also referred to as the columns of the internal table.
-- In a simple case, the line consists of a [flat structure](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenflat_structure_glosry.htm) with elementary data objects; however, it can also be a [deep structure](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abendeep_structure_glosry.htm) whose components can be structures themselves or even internal tables.
+- Internal Table의 각 행의 구성을 정의합니다. 즉, table이 어떤 열로 구성되는 지를 보여줍니다.
+- 모든 ABAP 데이터 타입이 될 수 있습니다. 예) [단순하거나 복잡한](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenelementary_data_type_glosry.htm)데이터 타입, [참조(Reference) 타입](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenreference_type_glosry.htm)
+- 대부분의 경우, Line Type은 [구조화](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenstructured_type_glosry.htm)되어 사용됩니다. 이 경우, 라인의 개별 컴포넌트는 Internal Table의 column이라고 표현합니다. 
+- [flat structure](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenflat_structure_glosry.htm) 라인으로 구성된 간단한 경우가 있는 반면, [deep structure](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abendeep_structure_glosry.htm)와 같이 컴포넌트가 구조체(structure) 자체이거나, 더 나아가 Internal Table인 경우가 있을 수 있습니다. 
 
 **Table Category**
 
-- Defines how internal tables are managed and stored internally, and how to access individual table entries.
-- Why is it relevant? The use of a suitable table category should meet your requirements, i.e. if the internal tables are large, the different categories can have significant performance differences when accessing table content.
-- Note: There are two ways to access internal tables:
-   - Access by table index: A line of an internal table is accessed by its line number. This kind of access is the fastest way to access table lines.
-   - Access by table key: A line of an internal table is accessed by searching for specific values in specific columns. Note: The columns in which you search can be key columns, but they can also be non-key columns.
+- Internal Table이 내부적으로 관리 및 저장되는 방식과 개별 table entry 에 접근하는 방법을 정의합니다.
+- 관련성: 요구사항에 부합하도록 알맞는 Table Category를 사용해야 합니다. Internal Table이 큰 경우, Table Category 에 따라 데이터 콘텐츠 접근 시 성능 차이게 크게 발생할 수 있습니다.
+- 참고: Internal Table에 접근하는 방법엔 두 가지가 있습니다.
+  - Table Index를 통해 접근: Internal Table의 행은 각 라인의 행번호로 접근할 수 있습니다. Table Line에 접근하는 가장 빠른 방법입니다.
+  - Table Key를 통해 접근: Internal Table의 행은 특정 열의 특정 값을 탐색하여 접근할 수 있습니다. 참고: 탐색 대상이 되는 열은 key column이 될 수도, non-key column이 될 수도 있습니다.
 
 
-| Category | Internally managed by | Access | Primary table key | When to use | Hints |
+| 유형 | 내부 괸리 방식 | 접근 (탐색) | Primary table key | 언제 사용하나요? | 힌트 |
 |---|---|---|---|---|---|
 |`STANDARD`|Primary table index (that's why these tables are called [index tables](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenindex_table_glosry.htm))|<ul><li>Table index</li><li>Table key</li></ul>|<ul><li>Always non-unique, i.e. duplicate entries are always allowed</li><li>Definition of an empty key is possible if the key is not relevant(`WITH EMPTY KEY`)</li></ul>|<ul><li>If you primarily access the table content for sequential processing or via the table index.</li><li>Response time for accessing the table using the primary key: This kind of table access is optimized only for sorted and hashed tables. For standard tables, primary key access uses a linear search across all lines. That means that large standard tables (more than 100 lines) are not ideal if the you primarily access the table using the table key.</></ul>|<ul><li>There is no particular sort order, but the tables can be sorted using `SORT`.</li><li>Filling this kind of table: Lines are either appended at the end of the table or inserted at a specific position.</li><li>[Secondary table keys](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abensecondary_table_key_glosry.htm) can be defined to make key access to standard tables more efficient.</li><li>Standard and sorted tables have the least [administration costs (F1 docu for standard ABAP)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenadmin_costs_dyn_mem_obj_guidl.htm).</li></ul>|
 |`SORTED`|Primary table index (that's why these tables are called [index tables](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenindex_table_glosry.htm))|<ul><li>Table index</li><li>Table key</li></ul>|<ul><li>Non-unique</li><li>Unique</li><br>... used to sort the table in ascending order.</ul>|<ul><li>Enables an optimized access to table content using table key and index.</li><li>If access via table key is the main access method, but no unique key can be defined.</li></ul>|<ul><li>Sorting is done automatically when lines are inserted or deleted. As a consequence, the table index must usually be reorganized. </li><li>The response time for accessing the table using the primary key depends logarithmically on the number of table entries, since a binary search is used.</li><li>Standard and sorted tables have the least administration costs.</li></ul>|
