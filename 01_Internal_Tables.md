@@ -22,6 +22,7 @@
   - [추가 정보](#추가-정보)
   - [실행 가능 예제](#실행-가능-예제)
 
+(譯註: 한국어로 변역이 불필요하거나, 번역 시 의미가 퇴색될 수 있는 용어는 적절히 영어 용어를 유지하였습니다)
 
 ## Introduction
 ## 개요
@@ -65,7 +66,10 @@ Internal Table은...
 
 
 
-**Key Attributes** 
+**Key 속성** 
+
+- Table key에는 두 형태가 있습니다: [primary table key(기본 카)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenprimary_table_key_glosry.htm) 그리고 [secondary table keys(보조키)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abensecondary_table_key_glosry.htm)
+
 
 - There are two types of table keys: a [primary table key](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenprimary_table_key_glosry.htm) and [secondary table keys](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abensecondary_table_key_glosry.htm).
 - Table keys ...
