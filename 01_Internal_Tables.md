@@ -108,15 +108,15 @@ Internal Table은...
 
 
 **Standard key**
-- The [standard key](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenstandard_key_glosry.htm) is a special primary table key.
-- It can be declared either explicitly or implicitly.
-- Standard key of an internal table with a ...
-   - structured line type: The primary table key consists of all fields with character-like and byte-like data types.
-   - non-structured/elementary line type: The entire table is the key (`table_line`).
-- An internal table with no explicit key specification implicitly has the standard table key as the primary table key.
-- Why respecting standard keys is important:
-  - Sorting of a table can produce unexpected results.
-  - Since the standard key can consist of many fields, it affects the performance when accessing the internal table via the keys.
+- [Standard key](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenstandard_key_glosry.htm)는 특별한 primary table key 입니다.
+- 명시적으로도, 암시적으로도 선언될 수 있습니다.
+- Internal Table의 standard key 는 ...
+   - Structured Line Type의 경우, Character-like, Byte-like 데이터 타입으로 구성된 모든 필드가 primary table key 입니다.
+   - Non-structured/elementary line type의 경우, 테이블 전체가 키입니다(`table_line`).
+- Internal table에서 명시적 키 선언을 하지 않은 경우, standard table key가 암묵적으로(implicitly) primary table key로 키가 설정됩니다.
+- Standard Key를 고려하는 것이 중요한 이유:
+  - 테이블 정렬 시 예상치 못한 결과로 이어질 수 있습니다.
+  - Standard key 가 여러 필드로 구성될 수 있으므로  key를 통한 internal table 접근 시 성능 문제가 발생할 수 있습니다. 
   - The key fields of the primary table key of sorted and hashed tables are always read-only, i.e. using the standard key with these table categories and then (unintentionally) modifying fields can cause unexpected runtime errors.
   - Specifying keys explicitly has the advantage of making the code more readable and preventing the standard key from being set by mistake.
 
