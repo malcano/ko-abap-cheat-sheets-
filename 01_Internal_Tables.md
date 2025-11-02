@@ -68,33 +68,28 @@ Internal Table은...
 
 **Key 속성** 
 
-- Table key에는 두 형태가 있습니다: [primary table key(기본 카)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenprimary_table_key_glosry.htm) 그리고 [secondary table keys(보조키)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abensecondary_table_key_glosry.htm)
+- Table key에는 두 형태가 있습니다: [primary table key(기본 키)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenprimary_table_key_glosry.htm) 그리고 [secondary table keys(보조키)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abensecondary_table_key_glosry.htm)
 
+- 테이블 키는 ...
+  - Internal Table의 콘텐츠에 대한 최적 접근을 위한 것입니다.
+  - Unique하거나 Non-unique 할 수 있습니다. 즉, internal table엔 동일한 키를 가진 중복 행이 하나 이상 존재할 수 있습니다. Primary table key의 정의값은 Table Category를 따르지만, Secondary table key 의 정의값은 key type에 따라 달라집니다. Standard Table에서는 primary key index가 빈 값을 가질 수 있습니다. (키 칼럼을 갖지 않을 수 있음) Standard Table에서는 Secondary table key를 통해서만 최적 접근이 가능하다는 점을 유의하세요.
+ - Key 유형:  
+   - 정렬키(Sorted keys): 
+     - Sorted table의 Primary table key 또는 모든 테이블의 Secondary table key입니다.
+     - 내부적으로 테이블 인덱스에 의해 관리되며, Sorted Table의 경우 Sorted Key 가 Primary table index입니다. Secondary table key의 경우, Secondary Table index가 추가됩니다.
+     - Sorted key를 통한 접근은 최적화된 이진 탐색(Binary Search)를 의미합니다.
+   - 해시 키(Hashed keys):
+     - Hashed table의 Primary table key 이며, 모든 테이블의 Secondary table key 입니다.
+     - 내부적으로 해시알고리즘으로 관리됩니다. 
+     - Hashed key에 대한 table index는 존재하지 않습니다.
 
-- There are two types of table keys: a [primary table key](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenprimary_table_key_glosry.htm) and [secondary table keys](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abensecondary_table_key_glosry.htm).
-- Table keys ...
-  - are intended to provide an optimized access to the content of internal tables.
-  - are either unique or non-unique, i.e. more than one line with the same key (duplicates) can exist in the internal table or not. Regarding the primary table key, the definition depends on the table category. For the secondary table key, the definition depends on the key type. For standard tables, the primary table key can also be defined as empty, i.e. it does not contain any key columns. Note that for standard tables, an optimized access is only possible with secondary table keys.
- - Type of keys:  
-   - Sorted keys: 
-     - Are either the primary table keys of sorted tables or the secondary table keys of any table.
-     - Are managed internally by a table index. In the case of sorted tables, this is the primary table index. In the case of secondary table keys, a secondary table index is added.
-     - Access via sorted keys means an optimized binary search.
-   - Hashed keys:
-     - Are either the primary table key of hashed tables or secondary table keys of any table.
-     - Internally managed by a hash algorithm. 
-     - There is no table index for a hashed key. 
-
-**Further information**
+**추가 정보**
 - [Internal Tables - Overview](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenitab_oview.htm)
 - [Programming guidelines: Internal Tables (F1 docu for standard ABAP)](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenadmin_costs_dyn_mem_obj_guidl.htm)
 
 <p align="right"><a href="#top">⬆️ back to top</a></p>
 
 ## Internal Table의 Table Key (Primary, Secondary, Standard, Empty)
-
-  <summary>Expand to view the details</summary>
-  <!-- -->
 
 **Primary table key**
 
