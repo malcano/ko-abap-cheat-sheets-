@@ -91,20 +91,21 @@ Internal Table은...
 
 ## Internal Table의 Table Key (Primary, Secondary, Standard, Empty)
 
-**Primary table key**
+**Primary table key(기본 테이블 키)**
 
-- Each internal table has a primary table key.
-- Can be either a self-defined key or the [standard key](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenstandard_key_glosry.htm).
-- The primary table key is ...
-  - sorted for sorted tables. 
-  - hashed for hashed tables.
-- Note that the key fields in sorted and hashed tables are read-only. This is not valid for standard tables.
-- The specification of the primary key can be omitted only for standard tables. The primary table key is then automatically defined as a non-unique standard key.
-- The primary table key has the predefined name `primary_key`, by which it can also be addressed explicitly. However, its use is optional, and it is usually not necessary to specify it explicitly. You can also specify an alias name for the primary key. 
-- When accessing internal tables using the table key, the primary key is always used implicitly in processing statements if no secondary key is specified. Note that the primary table key must be specified  in table expressions if the primary key is to be used explicitly.
+- 각 Internal Table은 Primary Table Key 를 갖습니다.
+- 사용자 정의 키이거나 [표준 키(Standard Key)](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenstandard_key_glosry.htm)일 수 있습니다.
+- Primary table key는 ...
+  - Sorted Table의 경우 정렬됩니다.
+  - Hashed Table의 경우 해시 처리 됩니다.
+- Sorted Table, Hashed Table의 키 필드는 읽기 전용(read-only)임에 유의하세요. Standard table은 해당하지 않습니다.
+- Primary key 지정은 standard Table인 경우에만 생략 가능하며, 이 경우 primary table key는 자동으로 non-unique standard key 로 정의됩니다. 
+- Primary Table key는 ‘primary_key’라는 사전 정의된 키를 가지며, 이를 통해 명시적으로(explicitly) 참조할 수 있습니다. 그러나 이는 선택사항이며, 일반적으로 명시적으로 선언할 필요는 없습니다. Primary key에 대한 별칭(Alias)을 설정할 수도 있습니다.
+- Table key를 통한 Internal Table 접근 시, secondary key 가 명시되지 않은 경우에도 항상 실행 구문에서 암시적으로(implicitly) primary key 를 사용합니다. Primary key 를 명시적으로 사용하려는 경우 반드시 table expression 에서 반드시 지정하여야만 합니다. 
 
-> **💡 Note**<br>
-> The key can consist of individual key fields or the entire line of the internal table. In this case, the pseudo component `table_line` can be used to denote the primary table key. For non-structured line types, this is the only way to define the key.
+> **💡 참고**<br>
+> 키는 개별 키 필드 또는 internal table의 전체 행으로 구성될 수 있습니다. 이 경우, ‘table_line’이라는 pseudo componet를 사용하여 primary table key 를 표현할 수 있으며, 이는 Non-structured line type에서 키를 정의하는 유일한 방법입니다.
+
 
 **Standard key**
 - The [standard key](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm?file=abenstandard_key_glosry.htm) is a special primary table key.
