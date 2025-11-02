@@ -218,7 +218,7 @@ ADT 환경의 경우, 패키지를 우클릭하여 *Refresh*를 선택합니다.
   - **ABAP for Cloud Development**: SAP BTP ABAP환경과 같은 특정 ABAP 언어 → [온라인 버전 문서](https://help.sap.com/doc/abapdocu_cp_index_htm/CLOUD/en-US/index.htm)
 - 클래식 ABAP에서 ABAP 키워드 문서의 예제는 `SABAPDEMOS` 패키지에서 확인하세요.
   ABAP 키워드 문서에서 사용된 모든 예제가 본 패키지에 포함되어 있습니다.
-  context, 클래스/패키지 명 등은 [예제 페이지](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap_examples.htm)에서 확인할 수 있으며, 시스템 내장 SAP GUI 버전에서도 예제별 내용을 트리 뷰를 통해 확인할 수 있습니다. 개별 주제에 대한 ABAP키워드 문서도 검색할 수 있으며, 예제별 토픽은 ⚙️ 아이콘으로 표기되어 있습니다. 
+  context, 클래스/패키지 명 등은 [예제 페이지](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abenabap_examples.htm)에서 확인할 수 있으며, 시스템 내장 SAP GUI 버전에서도 예제별 내용을 트리 뷰를 통해 확인할 수 있습니다. 개별 주제에 대한 ABAP키워드 문서도 검색할 수 있으며, 예제별 토픽은 ⚙️ 아이콘으로 표기되어 있습니다. <br>
   ![](./files/example_topics.png)
 
 <br>
